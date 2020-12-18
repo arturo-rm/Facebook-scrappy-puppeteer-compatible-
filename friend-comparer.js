@@ -1,4 +1,9 @@
+
+//your complete friendlist
 var friendsComplete = [];
+
+//your friendsadded list
+var friendsAdded = [];
 
 
 friendsComplete.sort(function(a, b) {
