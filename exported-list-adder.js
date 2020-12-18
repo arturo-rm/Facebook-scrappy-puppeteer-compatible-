@@ -1,7 +1,8 @@
 const puppeteer = require('puppeteer');
 
 //paste your friend list from "friend exporter" here
-const result = ["here"];
+const result = [ 
+];
 
 
 var lenR = result.length;
@@ -27,18 +28,33 @@ var lenR = result.length;
   for(let j = 0; j < lenR; j++){
     
     
-    console.log(result[j]) 
+   
     var rr = "";
     rr =  await browser.newPage()
-      await rr.goto(result[j], {  waitUntil: "networkidle2" })
-      if ((await rr.$("#mount_0_0 > div > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb > div.rq0escxv.l9j0dhe7.du4w35lb > div > div > div.j83agx80.cbu4d94t.d6urw2fd.dp1hu0rb.l9j0dhe7.du4w35lb > div.dp1hu0rb.cbu4d94t.j83agx80 > div > div > div.rq0escxv.lpgh02oy.du4w35lb.rek2kq2y > div > div > div > div.rq0escxv.l9j0dhe7.du4w35lb.j83agx80.cbu4d94t.pfnyh3mw.d2edcug0.hpfvmrgz.o8rfisnq > div > div > div.h676nmdw.buofh1pr.h8xcmbcu > div > div")) !== null) {
+      await rr.goto(result[j], {  waitUntil: "networkidle2" })      
+      console.log(result[j])
+      await rr.waitForTimeout(200)
+      if(await rr.$("#mount_0_0 > div > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb > div.poy2od1o.i09qtzwb.n7fi1qx3 > div.l9j0dhe7.fh5enmmv > div.l9j0dhe7.tkr6xdv7 > div.j83agx80.l9j0dhe7.du4w35lb.aovydwv3.do00u71z > div > div > div > div > div > div > div.pfnyh3mw.l9j0dhe7.tkr6xdv7 > div > div > div.j83agx80.bp9cbjyn.pfnyh3mw.cgat1ltu > span:nth-child(4) > div") !== null
+      ){await rr.click("#mount_0_0 > div > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb > div.poy2od1o.i09qtzwb.n7fi1qx3 > div.l9j0dhe7.fh5enmmv > div.l9j0dhe7.tkr6xdv7 > div.j83agx80.l9j0dhe7.du4w35lb.aovydwv3.do00u71z > div > div > div > div > div > div > div.pfnyh3mw.l9j0dhe7.tkr6xdv7 > div > div > div.j83agx80.bp9cbjyn.pfnyh3mw.cgat1ltu > span:nth-child(4) > div")}
+
       
+      if ((await rr.$("#mount_0_0 > div > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb > div.rq0escxv.l9j0dhe7.du4w35lb > div > div > div.j83agx80.cbu4d94t.d6urw2fd.dp1hu0rb.l9j0dhe7.du4w35lb > div.dp1hu0rb.cbu4d94t.j83agx80 > div > div > div.rq0escxv.lpgh02oy.du4w35lb.rek2kq2y > div > div > div > div.rq0escxv.l9j0dhe7.du4w35lb.j83agx80.cbu4d94t.pfnyh3mw.d2edcug0.hpfvmrgz.o8rfisnq > div > div > div.h676nmdw.buofh1pr.h8xcmbcu > div > div")) !== null
+      
+      ) {
+      
+        await rr.waitForTimeout(200)
+        if(await rr.$("#mount_0_0 > div > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb > div.poy2od1o.i09qtzwb.n7fi1qx3 > div.l9j0dhe7.fh5enmmv > div.l9j0dhe7.tkr6xdv7 > div.j83agx80.l9j0dhe7.du4w35lb.aovydwv3.do00u71z > div > div > div > div > div > div > div.pfnyh3mw.l9j0dhe7.tkr6xdv7 > div > div > div.j83agx80.bp9cbjyn.pfnyh3mw.cgat1ltu > span:nth-child(4) > div") !== null
+        ){
+          console.log(result[j])
+          await rr.click("#mount_0_0 > div > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb > div.poy2od1o.i09qtzwb.n7fi1qx3 > div.l9j0dhe7.fh5enmmv > div.l9j0dhe7.tkr6xdv7 > div.j83agx80.l9j0dhe7.du4w35lb.aovydwv3.do00u71z > div > div > div > div > div > div > div.pfnyh3mw.l9j0dhe7.tkr6xdv7 > div > div > div.j83agx80.bp9cbjyn.pfnyh3mw.cgat1ltu > span:nth-child(4) > div")}
+  
+
        //path to button, can be obtained at inspect element left click copy path: java. On any browser
         await rr.click("#mount_0_0 > div > div:nth-child(1) > div.rq0escxv.l9j0dhe7.du4w35lb > div.rq0escxv.l9j0dhe7.du4w35lb > div > div > div.j83agx80.cbu4d94t.d6urw2fd.dp1hu0rb.l9j0dhe7.du4w35lb > div.dp1hu0rb.cbu4d94t.j83agx80 > div > div > div.rq0escxv.lpgh02oy.du4w35lb.rek2kq2y > div > div > div > div.rq0escxv.l9j0dhe7.du4w35lb.j83agx80.cbu4d94t.pfnyh3mw.d2edcug0.hpfvmrgz.o8rfisnq > div > div > div.h676nmdw.buofh1pr.h8xcmbcu > div > div")
       }
-      console.log(j + "of" + lenR)
+     
+     
       await rr.close()
-      
   }
 
   

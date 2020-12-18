@@ -15,17 +15,32 @@ myarray.push([cleantext,cleanlink]);
 function friendTable() {
 var table = '<table><tbody>';
 var lenM = myarray.length;
-
-for (var i=0; i< lenM; i++) {
+var lenM1 = 0;
+var xd = 0; 
+for (let i=0; i< lenM; i++) {
 
 if(myarray[i][0] != "" && myarray[i][1] != "" && !myarray[i][1].contains("&sk=") && !myarray[i][1].contains("friends_mutual")){
- 
- table += '<tr><td>'+ "\"" + myarray[i][1]+ + " " +  "\"" +", "  +'</td></tr>' ;
-  }
+
+lenM1++;
+}
 };
 
-var tt = "<script type=\"text/javascript\" src=\"jquery-1.3.2.js\" ></script>";
-table += tt
+for (let i=0; i< lenM; i++) {
+if(myarray[i][0] != "" && myarray[i][1] != "" && !myarray[i][1].contains("&sk=") && !myarray[i][1].contains("friends_mutual")){
+
+  if (xd == lenM1 -1){
+    table += '<tr><td>'+ "\"" + myarray[i][1]+  "\""   +'</td></tr>' ;
+
+}
+ else{
+  table += '<tr><td>'+ "\"" + myarray[i][1] +  "\"" + " " +", "  +'</td></tr>' ;
+  xd++ }
+  
+}
+};
+
+
+
 
     var w = window.open("");
 w.document.write(table); 
